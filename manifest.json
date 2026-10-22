@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Mini",
+  "version": "1.0",
+  "description": "Minimizes the current tab into a small corner window.",
+  "permissions": [
+    "windows", 
+    "system.display"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_title": "Toggle Window Size",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-size": {
+      "suggested_key": {
+        "default": "Alt+M"
+      },
+      "description": "Toggle small window size"
+    },
+    "cycle-corner": {
+      "suggested_key": {
+        "default": "Alt+C"
+      },
+      "description": "Move window to the next corner"
+    }
+  }
+}
